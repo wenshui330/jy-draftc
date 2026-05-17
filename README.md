@@ -13,7 +13,6 @@ jy-draftc.exe
 SHA256SUMS.txt
 ```
 
-打开PowerShell
 
 ```powershell
 #powershell
@@ -29,7 +28,6 @@ cp .env.example .env
 JY_INSTALL_DIR=你的剪映安装目录
 ```
 
-打开PowerShell
 
 ```powershell
 cd 解压路径

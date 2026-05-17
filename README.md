@@ -181,20 +181,7 @@ Get-Content .\SHA256SUMS.txt
 Get-FileHash .\jy-draftc-amd64-windows.zip -Algorithm SHA256
 ```
 
-## 联系我
-如果有对此项目感兴趣的朋友，希望能在研究后提供给我一些反馈，尤其是：
-1. 各版本的脚本适用情况
-2. 各版本的草稿目录结构区别
-3. 各版本的 `draft_content.json` 和 `draft_meta_info.json` 结构区别
 
-邮箱为：
-bykupros@gmail.com
-wensbuilder@gmail.com
-
-社交软件：
-tg：[@bykupros](https://t.me/bykupros)
-
-### 暂不提供其他联系方式！！！
 
 ## 鸣谢
 感谢[Linux.do](https://linux.do/)站点及其社区为项目开发和交流提供支持和启发。

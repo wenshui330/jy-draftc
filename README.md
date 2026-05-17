@@ -80,7 +80,7 @@ g++ -std=c++17 -O2 -municode -Wall -Wextra -o jy-draftc.exe src\jy-draftc.cpp
 ## 实现原理
 
 
-```txt
+```mermaid
 flowchart TD
     A["jy-draftc.exe 启动"] --> B["读取同目录 .env"]
     B --> C["取得 JY_INSTALL_DIR"]
@@ -92,6 +92,7 @@ flowchart TD
     G -->|"回加密"| I["调用 enable true 和 encrypt"]
     I --> J["再次 decrypt 做回环校验"]
 ```
+
 
 当前使用到的导出入口：
 

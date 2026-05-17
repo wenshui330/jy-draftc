@@ -82,15 +82,15 @@ g++ -std=c++17 -O2 -municode -Wall -Wextra -o jy-draftc.exe src\jy-draftc.cpp
 
 ```txt
 flowchart TD
-    A[jy-draftc.exe 启动] --> B[读取同目录 .env]
-    B --> C[取得 JY_INSTALL_DIR]
-    C --> D[加载 videoeditor.dll]
-    D --> E[GetProcAddress 获取 EncryptUtils 导出函数]
-    E --> F[构造 MSVC std::string 兼容参数]
-    F --> G{运行模式}
-    G -->|解密| H[调用 decrypt]
-    G -->|回加密| I[调用 enable(true) 和 encrypt]
-    I --> J[再次 decrypt 做回环校验]
+    A["jy-draftc.exe 启动"] --> B["读取同目录 .env"]
+    B --> C["取得 JY_INSTALL_DIR"]
+    C --> D["加载 videoeditor.dll"]
+    D --> E["GetProcAddress 获取 EncryptUtils 导出函数"]
+    E --> F["构造 MSVC std::string 兼容参数"]
+    F --> G{"运行模式"}
+    G -->|"解密"| H["调用 decrypt"]
+    G -->|"回加密"| I["调用 enable true 和 encrypt"]
+    I --> J["再次 decrypt 做回环校验"]
 ```
 
 当前使用到的导出入口：

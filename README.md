@@ -195,6 +195,10 @@ wensbuilder@gmail.com
 tg：[@bykupros](https://t.me/bykupros)
 
 ### 暂不提供其他联系方式！！！
+
+## 鸣谢
+感谢[Linux.do](https://linux.do/)站点及其社区为项目开发和交流提供支持和启发。
+
 ## 许可证
 
 MIT License。详见 [LICENSE](LICENSE)。

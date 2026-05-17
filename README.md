@@ -15,7 +15,7 @@ SHA256SUMS.txt
 
 
 ```powershell
-#powershell
+#打开powershell
 cd 解压路径
 cp .env.example .env
 ```
@@ -30,6 +30,7 @@ JY_INSTALL_DIR=你的剪映安装目录
 
 
 ```powershell
+#打开powershell
 cd 解压路径
 ```
 

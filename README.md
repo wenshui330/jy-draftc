@@ -12,6 +12,7 @@ jy-draftc.exe
 .env.example
 SHA256SUMS.txt
 ```
+
 打开PowerShell
 
 ```powershell
@@ -20,15 +21,20 @@ cd 解压路径
 cp .env.example .env
 ```
 关闭PowerShell
+
 编辑.env
+
 ```env
 #这个目录下面必须能找到 videoeditor.dll
 JY_INSTALL_DIR=你的剪映安装目录
 ```
+
 打开PowerShell
+
 ```powershell
 cd 解压路径
 ```
+
 开始使用：
 
 解密单个文件：

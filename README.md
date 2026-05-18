@@ -7,23 +7,22 @@
 1. 应用 `jianying_draft_encrypt_v2` 加密方案 的剪映版本
 （ 明确验证 `10.3.0` 到 `10.6.5` ，其他未验证）
 2. 待更新...
-## 快速使用
+## 快速开始
 
-下载 Windows amd64 分发包后解压，目录里会有：
+### 准备
+下载 Windows amd64 分发包后解压，目录里有：
 
 ```text
 jy-draftc.exe
 .env.example
 SHA256SUMS.txt
 ```
-
+打开PowerShell
 
 ```powershell
-#打开powershell
 cd 解压路径
 cp .env.example .env
 ```
-关闭PowerShell
 
 编辑.env
 
@@ -32,13 +31,11 @@ cp .env.example .env
 JY_INSTALL_DIR=你的剪映安装目录
 ```
 
+### 开始使用
 
 ```powershell
-#打开powershell
 cd 解压路径
 ```
-
-开始使用：
 
 解密单个文件：
 

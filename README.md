@@ -139,27 +139,9 @@ EncryptUtils::decrypt(
 
 本项目按 MIT License 以“原样”提供，不提供任何明示或暗示担保。使用本项目造成的任何数据损坏、软件异常、账号风险、法律纠纷或其他后果，均由使用者自行承担。
 
-## 校验分发包
-
-分发包内提供 `SHA256SUMS.txt`。下载后可以在 PowerShell 中校验：
-
-```powershell
-Get-FileHash .\jy-draftc.exe -Algorithm SHA256
-Get-Content .\SHA256SUMS.txt
-```
-
-两个 hash 应当一致。
-
-也可以校验整个 zip：
-
-```powershell
-Get-FileHash .\jy-draftc-amd64-windows.zip -Algorithm SHA256
-```
-
-
 
 ## 鸣谢
-感谢[Linux.do](https://linux.do/)站点及其社区为项目开发和交流提供支持和启发。
+感谢[Linux.do](https://linux.do/)站点及其社区为项目开发和交流提供支持。
 
 ## 许可证
 

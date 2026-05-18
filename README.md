@@ -3,6 +3,9 @@
 `jy-draftc` 是一个用于剪映 Windows 端草稿 JSON 的解密和回加密工具。
 它能将草稿内的 `draft_content.json` 和 `draft_meta_info.json` 解密为明文json，并能在修改后回加密。
 
+## 适用范围
+1. 应用 `jianying_draft_encrypt_v2` 加密方案 的剪映版本
+2. 待更新...
 ## 快速使用
 
 下载 Windows amd64 分发包后解压，目录里会有：
@@ -127,34 +130,6 @@ EncryptUtils::decrypt(
 ?encrypt@EncryptUtils@lvve@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV34@@Z
 ```
 
-
-
-## 当前明确适用场景
-
-已验证环境：
-
-```text
-Windows
-JianyingPro 10.3.0至10.6.5.14040
-videoeditor.dll
-加密方案：jianying_draft_encrypt_v2
-```
-
-理论上，其他使用 `jianying_draft_encrypt_v2` 加密方案的版本`均适用`此程序。
-这个我没测试过，`不质保`（haha），我只测试了`10.3.0`到`10.6.5`之间的版本。
-
-v1版本方案没研究过，如果大家能提供明确的v1版本的草稿压缩包（样本）（里面内容随意），则可以进行研究。
-
-建议先复制草稿目录再操作，不要直接在唯一原稿上试验。
-
-## 未明确问题
-
-| 问题 | 状态 | 备注 |
-| --- | --- | --- |
-| CapCut 国际版是否通用 | 未确认 | 没测试过 |
-| 加密算法各版本的差异 | 未明确 | 这个影响不大 |
-| 改版本号能否让草稿降级 | 未确认 | 可能可以 |
-| 高版本保存旧草稿后是否发生结构迁移 | 未确认 | 可能 |
 
 ## 使用边界与免责声明
 

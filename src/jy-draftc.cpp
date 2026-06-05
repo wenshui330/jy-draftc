@@ -9,6 +9,7 @@
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <cstring>
 #include <sstream>
 #include <stdexcept>
 #include <string>
@@ -70,6 +71,16 @@ static std::string env_unquote(std::string s) {
     return ((a == '"' && b == '"') || (a == '\'' && b == '\'')) ? s.substr(1, s.size() - 2) : s;
 }
 
+static std::string strip_utf8_bom(std::string s) {
+    if (s.size() >= 3 &&
+        static_cast<unsigned char>(s[0]) == 0xEF &&
+        static_cast<unsigned char>(s[1]) == 0xBB &&
+        static_cast<unsigned char>(s[2]) == 0xBF) {
+        s.erase(0, 3);
+    }
+    return s;
+}
+
 static fs::path exe_dir() {
     std::wstring buf(32768, L'\0');
     DWORD n = GetModuleFileNameW(nullptr, buf.data(), static_cast<DWORD>(buf.size()));
@@ -101,8 +112,41 @@ static bool to_wide(const std::string &s, std::wstring &out) {
     return s.empty() ? (out.clear(), true) : false;
 }
 
-static fs::path install_dir_from_env() {
+static bool parse_install_dir_from_env_text(const std::string &env_text, fs::path *install_dir, std::string *err) {
+    std::istringstream lines(env_text);
+    std::string line;
+    while (std::getline(lines, line)) {
+        line = strip_utf8_bom(trim(std::move(line)));
+        if (line.empty() || line[0] == '#') continue;
+        size_t eq = line.find('=');
+        if (eq == std::string::npos || trim(line.substr(0, eq)) != "JY_INSTALL_DIR") continue;
+        std::wstring w;
+        if (!to_wide(env_unquote(line.substr(eq + 1)), w)) {
+            *err = "JY_INSTALL_DIR is not valid UTF-8/ANSI text";
+            return false;
+        }
+        fs::path dir(w), dll = dir / L"videoeditor.dll";
+        if (dir.empty()) {
+            *err = "JY_INSTALL_DIR is empty in .env";
+            return false;
+        }
+        if (!fs::exists(dir)) {
+            *err = "JY_INSTALL_DIR does not exist: " + narrow(dir.wstring());
+            return false;
+        }
+        if (!fs::exists(dll)) {
+            *err = "videoeditor.dll not found under JY_INSTALL_DIR: " + narrow(dir.wstring());
+            return false;
+        }
+        *install_dir = dir;
+        return true;
+    }
 
+    *err = "JY_INSTALL_DIR missing in .env";
+    return false;
+}
+
+static fs::path install_dir_from_env() {
     fs::path env = exe_dir() / L".env";
     std::string env_text;
     try {
@@ -110,22 +154,61 @@ static fs::path install_dir_from_env() {
     } catch (...) {
         throw Error(1, "cannot read .env: " + narrow(env.wstring()));
     }
-    std::istringstream lines(env_text);
-    std::string line;
-    while (std::getline(lines, line)) {
-        line = trim(std::move(line));
-        if (line.empty() || line[0] == '#') continue;
-        size_t eq = line.find('=');
-        if (eq == std::string::npos || trim(line.substr(0, eq)) != "JY_INSTALL_DIR") continue;
-        std::wstring w;
-        if (!to_wide(env_unquote(line.substr(eq + 1)), w)) throw Error(1, "JY_INSTALL_DIR is not valid UTF-8/ANSI text");
-        fs::path dir(w), dll = dir / L"videoeditor.dll";
-        if (dir.empty()) throw Error(1, "JY_INSTALL_DIR is empty in .env");
-        if (!fs::exists(dir)) throw Error(1, "JY_INSTALL_DIR does not exist: " + narrow(dir.wstring()));
-        if (!fs::exists(dll)) throw Error(1, "videoeditor.dll not found under JY_INSTALL_DIR: " + narrow(dir.wstring()));
-        return dir;
+
+    fs::path dir;
+    std::string err;
+    if (!parse_install_dir_from_env_text(env_text, &dir, &err)) {
+        throw Error(1, err);
     }
-    throw Error(1, "JY_INSTALL_DIR missing in .env");
+    return dir;
+}
+
+static std::wstring get_env_var(const wchar_t *name) {
+    DWORD need = GetEnvironmentVariableW(name, nullptr, 0);
+    if (need == 0) return {};
+    std::wstring value(need, L'\0');
+    DWORD got = GetEnvironmentVariableW(name, value.data(), need);
+    if (got == 0 || got >= need) return {};
+    value.resize(got);
+    return value;
+}
+
+static std::wstring path_with_prepended_dir(const fs::path &dir, const std::wstring &original_path) {
+    std::wstring result = dir.wstring();
+    if (!original_path.empty()) {
+        result += L";";
+        result += original_path;
+    }
+    return result;
+}
+
+static void configure_dll_search(const fs::path &dir) {
+    SetErrorMode(SEM_FAILCRITICALERRORS | SEM_NOOPENFILEERRORBOX);
+    if (!SetEnvironmentVariableW(L"PATH", path_with_prepended_dir(dir, get_env_var(L"PATH")).c_str())) {
+        throw Error(2, "SetEnvironmentVariableW(PATH) failed, gle=" + std::to_string(GetLastError()));
+    }
+    SetCurrentDirectoryW(dir.wstring().c_str());
+    SetDllDirectoryW(L"");
+
+    if (!SetDefaultDllDirectories(LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32 | LOAD_LIBRARY_SEARCH_USER_DIRS)) {
+        DWORD gle = GetLastError();
+        if (gle != ERROR_PROC_NOT_FOUND && gle != ERROR_INVALID_PARAMETER) {
+            throw Error(2, "SetDefaultDllDirectories failed, gle=" + std::to_string(gle));
+        }
+    }
+
+    DLL_DIRECTORY_COOKIE cookie = AddDllDirectory(dir.wstring().c_str());
+    if (!cookie) {
+        DWORD gle = GetLastError();
+        if (gle != ERROR_PROC_NOT_FOUND && gle != ERROR_INVALID_PARAMETER) {
+            throw Error(2, "AddDllDirectory failed, gle=" + std::to_string(gle) + ", dir=" + narrow(dir.wstring()));
+        }
+    }
+}
+
+static fs::path absolute_from(const fs::path &base, const fs::path &path) {
+    if (path.empty() || path.is_absolute()) return path;
+    return (base / path).lexically_normal();
 }
 
 struct StrArg {
@@ -162,22 +245,24 @@ struct VeApi {
     static T sym(HMODULE dll, const char *name, const char *label) {
         auto p = GetProcAddress(dll, name);
         if (!p) throw Error(3, std::string(label) + " export missing");
-        return reinterpret_cast<T>(p);
+        T out{};
+        static_assert(sizeof(out) == sizeof(p), "function pointer size mismatch");
+        memcpy(&out, &p, sizeof(out));
+        return out;
     }
 
     static VeApi load(const fs::path &dir) {
-        SetErrorMode(SEM_FAILCRITICALERRORS | SEM_NOOPENFILEERRORBOX);
-        SetEnvironmentVariableW(L"PATH", dir.wstring().c_str());
-        SetCurrentDirectoryW(dir.wstring().c_str());
-        SetDllDirectoryW(L"");
-        SetDefaultDllDirectories(LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32 | LOAD_LIBRARY_SEARCH_USER_DIRS);
-        AddDllDirectory(dir.wstring().c_str());
+        configure_dll_search(dir);
 
         fs::path p = dir / L"videoeditor.dll";
         DWORD flags = LOAD_LIBRARY_SEARCH_DLL_LOAD_DIR | LOAD_LIBRARY_SEARCH_APPLICATION_DIR |
                       LOAD_LIBRARY_SEARCH_SYSTEM32 | LOAD_LIBRARY_SEARCH_USER_DIRS;
         HMODULE h = LoadLibraryExW(p.wstring().c_str(), nullptr, flags);
-        if (!h) throw Error(2, "LoadLibraryExW(videoeditor.dll) failed, gle=" + std::to_string(GetLastError()) + ", path=" + narrow(p.wstring()));
+        if (!h) {
+            throw Error(2, "LoadLibraryExW(videoeditor.dll) failed, gle=" + std::to_string(GetLastError()) +
+                               ", path=" + narrow(p.wstring()) +
+                               ". Check that JY_INSTALL_DIR points to the version directory that contains videoeditor.dll.");
+        }
         return {h, sym<DecryptFn>(h, kDec, "decrypt"), sym<EncryptFn>(h, kEnc, "encrypt"), sym<EnableFn>(h, kEnable, "enable")};
     }
 
@@ -282,10 +367,14 @@ static int run_one(const VeApi &ve, bool enc_mode, const Job &j, std::string &ms
         msg = ok.str();
         return 0;
     } catch (const Error &e) {
-        msg = e.what();
+        std::ostringstream fail;
+        fail << "input=" << narrow(j.in.wstring()) << " output=" << narrow(j.out.wstring()) << " " << e.what();
+        msg = fail.str();
         return e.code;
     } catch (const std::exception &e) {
-        msg = e.what();
+        std::ostringstream fail;
+        fail << "input=" << narrow(j.in.wstring()) << " output=" << narrow(j.out.wstring()) << " " << e.what();
+        msg = fail.str();
         return 1;
     }
 }
@@ -332,15 +421,18 @@ int wmain(int argc, wchar_t **argv) {
         if (!comma && argc > 4) return std::cerr << "too many arguments for single-file mode\n", 64;
         if (comma && inputs.size() <= 1 && argc > 3) return std::cerr << "comma-list mode does not accept a separate output path\n", 64;
 
-        VeApi ve = VeApi::load(install_dir_from_env());
+        fs::path launch_cwd = fs::current_path();
         std::vector<Job> jobs;
         jobs.reserve(inputs.size());
         for (size_t i = 0; i < inputs.size(); ++i) {
+            fs::path input = absolute_from(launch_cwd, inputs[i]);
             fs::path out = !comma && inputs.size() == 1 && argc >= 4
-                               ? fs::path(argv[3])
-                               : inputs[i].parent_path() / (inputs[i].filename().wstring() + (dec ? L".dec.json" : L".enc.json"));
-            jobs.push_back({i, inputs[i], out});
+                               ? absolute_from(launch_cwd, fs::path(argv[3]))
+                               : input.parent_path() / (input.filename().wstring() + (dec ? L".dec.json" : L".enc.json"));
+            jobs.push_back({i, input, out});
         }
+
+        VeApi ve = VeApi::load(install_dir_from_env());
         return run_jobs(ve, enc, jobs);
     } catch (const Error &e) {
         std::cerr << e.what() << "\n";

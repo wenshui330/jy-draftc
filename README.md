@@ -73,7 +73,7 @@ cd 解压路径
 使用 MinGW-w64 构建：
 
 ```powershell
-g++ -std=c++17 -O2 -municode -Wall -Wextra -o jy-draftc.exe src\jy-draftc.cpp
+g++ -std=c++17 -O2 -municode -Wall -Wextra -static -static-libgcc -static-libstdc++ -o jy-draftc.exe src\jy-draftc.cpp
 ```
 
 编译时可能出现 `GetProcAddress` 到函数指针的类型转换 warning，这是当前手动调用 C++ 导出函数的预期结果。

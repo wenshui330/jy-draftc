@@ -7,6 +7,12 @@
 1. 应用 `jianying_draft_encrypt_v2` 加密方案 的剪映版本
 （ 明确验证 `10.3.0` 到 `10.6.5` ，其他未验证）
 2. 待更新...
+
+## MacOS适配
+感谢&nbsp;[@vhly](https://github.com/vhly)&nbsp;贡献的适用于MacOS的软件版本
+
+[阅读文档](./jy-draftc-mac/README.md)
+
 ## 快速开始
 
 ### 准备

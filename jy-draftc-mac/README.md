@@ -14,3 +14,11 @@
 - [jy-draftc](https://github.com/wenshui330/jy-draftc)
 - [ts-draft](https://draft.dragchain.dev)
 
+## HotFix
+
+- XCode project can run, but product binary in Term report : dylib not found
+
+    * In XCode "Build Settings" and Runpath with "executeable" and "executeable/Frameworks": let binary find dylib in theres
+    ![Build Settings](docs/01-HotFix-SupportCommandLine-framework-search.png)
+    * Run binary in term run success!
+    ![Run Success in command line term](docs/02-HotFix-Finial-Test.png)

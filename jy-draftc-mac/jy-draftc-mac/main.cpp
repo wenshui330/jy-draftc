@@ -24,7 +24,7 @@ int main(int argc, const char * argv[]) {
     // 1. 设置加密
     EncryptUtils eu = EncryptUtils();
     eu.enable(true);
-    const std::string origStr = "{\"canvas_config\":{\"height\":1080,\"ratio\":\"16:9\",\"width\":1920},\"color_space\":0,\"create_time\":1659844631992,\"duration\":27466666,\"update_time\":1659844631992,\"version\":440000}";
+    const std::string origStr = "{\"readme\":\"This is only for study, this is a command line project in mac os. so you can modify and run for your logic, more information in README.md\",\"canvas_config\":{\"height\":1080,\"ratio\":\"16:9\",\"width\":1920},\"color_space\":0,\"create_time\":1659844631992,\"duration\":27466666,\"update_time\":1659844631992,\"version\":440000}";
     string encryptedStr = eu.encrypt(origStr);
     cout << "encryptedStr: " << encryptedStr << endl;
     

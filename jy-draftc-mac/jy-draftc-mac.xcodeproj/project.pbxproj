@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D584D5CE3004DA2800EBB2FB /* libavdevice.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5B53004DA2800EBB2FB /* libavdevice.dylib */; };
+		D584D5CF3004DA2800EBB2FB /* libdav1d.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5BD3004DA2800EBB2FB /* libdav1d.dylib */; };
+		D584D5D03004DA2800EBB2FB /* libbytenn.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5B93004DA2800EBB2FB /* libbytenn.dylib */; };
+		D584D5D13004DA2800EBB2FB /* libffmpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5BF3004DA2800EBB2FB /* libffmpeg.dylib */; };
+		D584D5D23004DA2800EBB2FB /* libfastcv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5BE3004DA2800EBB2FB /* libfastcv.dylib */; };
+		D584D5D33004DA2800EBB2FB /* libcccreator.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5BB3004DA2800EBB2FB /* libcccreator.dylib */; };
+		D584D5D43004DA2800EBB2FB /* libAGFX.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5B33004DA2800EBB2FB /* libAGFX.dylib */; };
+		D584D5D53004DA2800EBB2FB /* liblens.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5C13004DA2800EBB2FB /* liblens.dylib */; };
+		D584D5D63004DA2800EBB2FB /* libspeechsdk.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5C73004DA2800EBB2FB /* libspeechsdk.dylib */; };
+		D584D5D73004DA2800EBB2FB /* libIESAppLogger.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5C03004DA2800EBB2FB /* libIESAppLogger.dylib */; };
+		D584D5D83004DA2800EBB2FB /* libvecryptor.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5CB3004DA2800EBB2FB /* libvecryptor.dylib */; };
+		D584D5D93004DA2800EBB2FB /* libnuro.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5C33004DA2800EBB2FB /* libnuro.dylib */; };
+		D584D5DA3004DA2800EBB2FB /* libswscale.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5CA3004DA2800EBB2FB /* libswscale.dylib */; };
+		D584D5DB3004DA2800EBB2FB /* libavfilter.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5B63004DA2800EBB2FB /* libavfilter.dylib */; };
+		D584D5DC3004DA2800EBB2FB /* libvideoeditor.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5CC3004DA2800EBB2FB /* libvideoeditor.dylib */; };
+		D584D5DD3004DA2800EBB2FB /* libonnxruntime.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5C43004DA2800EBB2FB /* libonnxruntime.dylib */; };
+		D584D5DE3004DA2800EBB2FB /* libavcodec.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5B43004DA2800EBB2FB /* libavcodec.dylib */; };
+		D584D5DF3004DA2800EBB2FB /* libonnxruntime.1.17.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5C53004DA2800EBB2FB /* libonnxruntime.1.17.1.dylib */; };
+		D584D5E03004DA2800EBB2FB /* libavformat.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5B73004DA2800EBB2FB /* libavformat.dylib */; };
+		D584D5E13004DA2800EBB2FB /* libsscronet.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5C83004DA2800EBB2FB /* libsscronet.dylib */; };
+		D584D5E23004DA2800EBB2FB /* libavutil.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5B83004DA2800EBB2FB /* libavutil.dylib */; };
+		D584D5E33004DA2800EBB2FB /* libmp3lame.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5C23004DA2800EBB2FB /* libmp3lame.0.dylib */; };
+		D584D5E43004DA2800EBB2FB /* libsamicore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5C63004DA2800EBB2FB /* libsamicore.dylib */; };
+		D584D5E53004DA2800EBB2FB /* libclipflow_sdk.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5BC3004DA2800EBB2FB /* libclipflow_sdk.dylib */; };
+		D584D5E63004DA2800EBB2FB /* libByteVC1_dec.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5BA3004DA2800EBB2FB /* libByteVC1_dec.dylib */; };
+		D584D5E73004DA2800EBB2FB /* libswresample.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D584D5C93004DA2800EBB2FB /* libswresample.dylib */; };
+		D584D5E83004DA2C00EBB2FB /* libAGFX.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5B33004DA2800EBB2FB /* libAGFX.dylib */; };
+		D584D5EA3004DA3100EBB2FB /* libavcodec.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5B43004DA2800EBB2FB /* libavcodec.dylib */; };
+		D584D5EB3004DA3300EBB2FB /* libavdevice.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5B53004DA2800EBB2FB /* libavdevice.dylib */; };
+		D584D5EC3004DA3400EBB2FB /* libavfilter.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5B63004DA2800EBB2FB /* libavfilter.dylib */; };
+		D584D5ED3004DA3600EBB2FB /* libavformat.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5B73004DA2800EBB2FB /* libavformat.dylib */; };
+		D584D5EE3004DA3700EBB2FB /* libavutil.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5B83004DA2800EBB2FB /* libavutil.dylib */; };
+		D584D5EF3004DA3900EBB2FB /* libbytenn.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5B93004DA2800EBB2FB /* libbytenn.dylib */; };
+		D584D5F03004DA3A00EBB2FB /* libByteVC1_dec.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5BA3004DA2800EBB2FB /* libByteVC1_dec.dylib */; };
+		D584D5F13004DA3C00EBB2FB /* libcccreator.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5BB3004DA2800EBB2FB /* libcccreator.dylib */; };
+		D584D5F23004DA3E00EBB2FB /* libclipflow_sdk.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5BC3004DA2800EBB2FB /* libclipflow_sdk.dylib */; };
+		D584D5F33004DA3F00EBB2FB /* libdav1d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5BD3004DA2800EBB2FB /* libdav1d.dylib */; };
+		D584D5F43004DA4200EBB2FB /* libfastcv.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5BE3004DA2800EBB2FB /* libfastcv.dylib */; };
+		D584D5F53004DA4400EBB2FB /* libffmpeg.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5BF3004DA2800EBB2FB /* libffmpeg.dylib */; };
+		D584D5F63004DA4500EBB2FB /* libIESAppLogger.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5C03004DA2800EBB2FB /* libIESAppLogger.dylib */; };
+		D584D5F73004DA4700EBB2FB /* liblens.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5C13004DA2800EBB2FB /* liblens.dylib */; };
+		D584D5F83004DA4800EBB2FB /* libmp3lame.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5C23004DA2800EBB2FB /* libmp3lame.0.dylib */; };
+		D584D5F93004DA4A00EBB2FB /* libnuro.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5C33004DA2800EBB2FB /* libnuro.dylib */; };
+		D584D5FA3004DA4C00EBB2FB /* libonnxruntime.1.17.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5C53004DA2800EBB2FB /* libonnxruntime.1.17.1.dylib */; };
+		D584D5FB3004DA4E00EBB2FB /* libonnxruntime.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5C43004DA2800EBB2FB /* libonnxruntime.dylib */; };
+		D584D5FC3004DA5000EBB2FB /* libsamicore.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5C63004DA2800EBB2FB /* libsamicore.dylib */; };
+		D584D5FD3004DA5100EBB2FB /* libspeechsdk.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5C73004DA2800EBB2FB /* libspeechsdk.dylib */; };
+		D584D5FE3004DA5300EBB2FB /* libsscronet.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5C83004DA2800EBB2FB /* libsscronet.dylib */; };
+		D584D5FF3004DA5500EBB2FB /* libswresample.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5C93004DA2800EBB2FB /* libswresample.dylib */; };
+		D584D6003004DA5700EBB2FB /* libswscale.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5CA3004DA2800EBB2FB /* libswscale.dylib */; };
+		D584D6013004DA5800EBB2FB /* libvecryptor.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5CB3004DA2800EBB2FB /* libvecryptor.dylib */; };
+		D584D6023004DA5A00EBB2FB /* libvideoeditor.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D584D5CC3004DA2800EBB2FB /* libvideoeditor.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D584D5A73004D9FF00EBB2FB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		D584D5E93004DA2C00EBB2FB /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D584D5ED3004DA3600EBB2FB /* libavformat.dylib in Embed Libraries */,
+				D584D5FC3004DA5000EBB2FB /* libsamicore.dylib in Embed Libraries */,
+				D584D5EF3004DA3900EBB2FB /* libbytenn.dylib in Embed Libraries */,
+				D584D5F93004DA4A00EBB2FB /* libnuro.dylib in Embed Libraries */,
+				D584D5F33004DA3F00EBB2FB /* libdav1d.dylib in Embed Libraries */,
+				D584D6023004DA5A00EBB2FB /* libvideoeditor.dylib in Embed Libraries */,
+				D584D5FF3004DA5500EBB2FB /* libswresample.dylib in Embed Libraries */,
+				D584D5FE3004DA5300EBB2FB /* libsscronet.dylib in Embed Libraries */,
+				D584D5F43004DA4200EBB2FB /* libfastcv.dylib in Embed Libraries */,
+				D584D5EE3004DA3700EBB2FB /* libavutil.dylib in Embed Libraries */,
+				D584D5FB3004DA4E00EBB2FB /* libonnxruntime.dylib in Embed Libraries */,
+				D584D5F23004DA3E00EBB2FB /* libclipflow_sdk.dylib in Embed Libraries */,
+				D584D5EA3004DA3100EBB2FB /* libavcodec.dylib in Embed Libraries */,
+				D584D5F13004DA3C00EBB2FB /* libcccreator.dylib in Embed Libraries */,
+				D584D5F83004DA4800EBB2FB /* libmp3lame.0.dylib in Embed Libraries */,
+				D584D5F63004DA4500EBB2FB /* libIESAppLogger.dylib in Embed Libraries */,
+				D584D5E83004DA2C00EBB2FB /* libAGFX.dylib in Embed Libraries */,
+				D584D5EB3004DA3300EBB2FB /* libavdevice.dylib in Embed Libraries */,
+				D584D5FA3004DA4C00EBB2FB /* libonnxruntime.1.17.1.dylib in Embed Libraries */,
+				D584D5F73004DA4700EBB2FB /* liblens.dylib in Embed Libraries */,
+				D584D6003004DA5700EBB2FB /* libswscale.dylib in Embed Libraries */,
+				D584D5F03004DA3A00EBB2FB /* libByteVC1_dec.dylib in Embed Libraries */,
+				D584D5EC3004DA3400EBB2FB /* libavfilter.dylib in Embed Libraries */,
+				D584D5FD3004DA5100EBB2FB /* libspeechsdk.dylib in Embed Libraries */,
+				D584D5F53004DA4400EBB2FB /* libffmpeg.dylib in Embed Libraries */,
+				D584D6013004DA5800EBB2FB /* libvecryptor.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D584D5A93004D9FF00EBB2FB /* jy-draftc-mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "jy-draftc-mac"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D584D5B33004DA2800EBB2FB /* libAGFX.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libAGFX.dylib; sourceTree = "<group>"; };
+		D584D5B43004DA2800EBB2FB /* libavcodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavcodec.dylib; sourceTree = "<group>"; };
+		D584D5B53004DA2800EBB2FB /* libavdevice.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavdevice.dylib; sourceTree = "<group>"; };
+		D584D5B63004DA2800EBB2FB /* libavfilter.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavfilter.dylib; sourceTree = "<group>"; };
+		D584D5B73004DA2800EBB2FB /* libavformat.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavformat.dylib; sourceTree = "<group>"; };
+		D584D5B83004DA2800EBB2FB /* libavutil.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavutil.dylib; sourceTree = "<group>"; };
+		D584D5B93004DA2800EBB2FB /* libbytenn.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libbytenn.dylib; sourceTree = "<group>"; };
+		D584D5BA3004DA2800EBB2FB /* libByteVC1_dec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libByteVC1_dec.dylib; sourceTree = "<group>"; };
+		D584D5BB3004DA2800EBB2FB /* libcccreator.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcccreator.dylib; sourceTree = "<group>"; };
+		D584D5BC3004DA2800EBB2FB /* libclipflow_sdk.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libclipflow_sdk.dylib; sourceTree = "<group>"; };
+		D584D5BD3004DA2800EBB2FB /* libdav1d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libdav1d.dylib; sourceTree = "<group>"; };
+		D584D5BE3004DA2800EBB2FB /* libfastcv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfastcv.dylib; sourceTree = "<group>"; };
+		D584D5BF3004DA2800EBB2FB /* libffmpeg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libffmpeg.dylib; sourceTree = "<group>"; };
+		D584D5C03004DA2800EBB2FB /* libIESAppLogger.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libIESAppLogger.dylib; sourceTree = "<group>"; };
+		D584D5C13004DA2800EBB2FB /* liblens.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblens.dylib; sourceTree = "<group>"; };
+		D584D5C23004DA2800EBB2FB /* libmp3lame.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmp3lame.0.dylib; sourceTree = "<group>"; };
+		D584D5C33004DA2800EBB2FB /* libnuro.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libnuro.dylib; sourceTree = "<group>"; };
+		D584D5C43004DA2800EBB2FB /* libonnxruntime.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libonnxruntime.dylib; sourceTree = "<group>"; };
+		D584D5C53004DA2800EBB2FB /* libonnxruntime.1.17.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libonnxruntime.1.17.1.dylib; sourceTree = "<group>"; };
+		D584D5C63004DA2800EBB2FB /* libsamicore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsamicore.dylib; sourceTree = "<group>"; };
+		D584D5C73004DA2800EBB2FB /* libspeechsdk.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libspeechsdk.dylib; sourceTree = "<group>"; };
+		D584D5C83004DA2800EBB2FB /* libsscronet.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsscronet.dylib; sourceTree = "<group>"; };
+		D584D5C93004DA2800EBB2FB /* libswresample.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libswresample.dylib; sourceTree = "<group>"; };
+		D584D5CA3004DA2800EBB2FB /* libswscale.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libswscale.dylib; sourceTree = "<group>"; };
+		D584D5CB3004DA2800EBB2FB /* libvecryptor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libvecryptor.dylib; sourceTree = "<group>"; };
+		D584D5CC3004DA2800EBB2FB /* libvideoeditor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libvideoeditor.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D584D5AB3004D9FF00EBB2FB /* jy-draftc-mac */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "jy-draftc-mac";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D584D5A63004D9FF00EBB2FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D584D5CE3004DA2800EBB2FB /* libavdevice.dylib in Frameworks */,
+				D584D5CF3004DA2800EBB2FB /* libdav1d.dylib in Frameworks */,
+				D584D5D03004DA2800EBB2FB /* libbytenn.dylib in Frameworks */,
+				D584D5D13004DA2800EBB2FB /* libffmpeg.dylib in Frameworks */,
+				D584D5D23004DA2800EBB2FB /* libfastcv.dylib in Frameworks */,
+				D584D5D33004DA2800EBB2FB /* libcccreator.dylib in Frameworks */,
+				D584D5D43004DA2800EBB2FB /* libAGFX.dylib in Frameworks */,
+				D584D5D53004DA2800EBB2FB /* liblens.dylib in Frameworks */,
+				D584D5D63004DA2800EBB2FB /* libspeechsdk.dylib in Frameworks */,
+				D584D5D73004DA2800EBB2FB /* libIESAppLogger.dylib in Frameworks */,
+				D584D5D83004DA2800EBB2FB /* libvecryptor.dylib in Frameworks */,
+				D584D5D93004DA2800EBB2FB /* libnuro.dylib in Frameworks */,
+				D584D5DA3004DA2800EBB2FB /* libswscale.dylib in Frameworks */,
+				D584D5DB3004DA2800EBB2FB /* libavfilter.dylib in Frameworks */,
+				D584D5DC3004DA2800EBB2FB /* libvideoeditor.dylib in Frameworks */,
+				D584D5DD3004DA2800EBB2FB /* libonnxruntime.dylib in Frameworks */,
+				D584D5DE3004DA2800EBB2FB /* libavcodec.dylib in Frameworks */,
+				D584D5DF3004DA2800EBB2FB /* libonnxruntime.1.17.1.dylib in Frameworks */,
+				D584D5E03004DA2800EBB2FB /* libavformat.dylib in Frameworks */,
+				D584D5E13004DA2800EBB2FB /* libsscronet.dylib in Frameworks */,
+				D584D5E23004DA2800EBB2FB /* libavutil.dylib in Frameworks */,
+				D584D5E33004DA2800EBB2FB /* libmp3lame.0.dylib in Frameworks */,
+				D584D5E43004DA2800EBB2FB /* libsamicore.dylib in Frameworks */,
+				D584D5E53004DA2800EBB2FB /* libclipflow_sdk.dylib in Frameworks */,
+				D584D5E63004DA2800EBB2FB /* libByteVC1_dec.dylib in Frameworks */,
+				D584D5E73004DA2800EBB2FB /* libswresample.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D584D5A03004D9FF00EBB2FB = {
+			isa = PBXGroup;
+			children = (
+				D584D5CD3004DA2800EBB2FB /* Frameworks */,
+				D584D5AB3004D9FF00EBB2FB /* jy-draftc-mac */,
+				D584D5AA3004D9FF00EBB2FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D584D5AA3004D9FF00EBB2FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D584D5A93004D9FF00EBB2FB /* jy-draftc-mac */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D584D5CD3004DA2800EBB2FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D584D5B33004DA2800EBB2FB /* libAGFX.dylib */,
+				D584D5B43004DA2800EBB2FB /* libavcodec.dylib */,
+				D584D5B53004DA2800EBB2FB /* libavdevice.dylib */,
+				D584D5B63004DA2800EBB2FB /* libavfilter.dylib */,
+				D584D5B73004DA2800EBB2FB /* libavformat.dylib */,
+				D584D5B83004DA2800EBB2FB /* libavutil.dylib */,
+				D584D5B93004DA2800EBB2FB /* libbytenn.dylib */,
+				D584D5BA3004DA2800EBB2FB /* libByteVC1_dec.dylib */,
+				D584D5BB3004DA2800EBB2FB /* libcccreator.dylib */,
+				D584D5BC3004DA2800EBB2FB /* libclipflow_sdk.dylib */,
+				D584D5BD3004DA2800EBB2FB /* libdav1d.dylib */,
+				D584D5BE3004DA2800EBB2FB /* libfastcv.dylib */,
+				D584D5BF3004DA2800EBB2FB /* libffmpeg.dylib */,
+				D584D5C03004DA2800EBB2FB /* libIESAppLogger.dylib */,
+				D584D5C13004DA2800EBB2FB /* liblens.dylib */,
+				D584D5C23004DA2800EBB2FB /* libmp3lame.0.dylib */,
+				D584D5C33004DA2800EBB2FB /* libnuro.dylib */,
+				D584D5C43004DA2800EBB2FB /* libonnxruntime.dylib */,
+				D584D5C53004DA2800EBB2FB /* libonnxruntime.1.17.1.dylib */,
+				D584D5C63004DA2800EBB2FB /* libsamicore.dylib */,
+				D584D5C73004DA2800EBB2FB /* libspeechsdk.dylib */,
+				D584D5C83004DA2800EBB2FB /* libsscronet.dylib */,
+				D584D5C93004DA2800EBB2FB /* libswresample.dylib */,
+				D584D5CA3004DA2800EBB2FB /* libswscale.dylib */,
+				D584D5CB3004DA2800EBB2FB /* libvecryptor.dylib */,
+				D584D5CC3004DA2800EBB2FB /* libvideoeditor.dylib */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D584D5A83004D9FF00EBB2FB /* jy-draftc-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D584D5B03004D9FF00EBB2FB /* Build configuration list for PBXNativeTarget "jy-draftc-mac" */;
+			buildPhases = (
+				D584D5A53004D9FF00EBB2FB /* Sources */,
+				D584D5A63004D9FF00EBB2FB /* Frameworks */,
+				D584D5A73004D9FF00EBB2FB /* CopyFiles */,
+				D584D5E93004DA2C00EBB2FB /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D584D5AB3004D9FF00EBB2FB /* jy-draftc-mac */,
+			);
+			name = "jy-draftc-mac";
+			packageProductDependencies = (
+			);
+			productName = "jy-draftc-mac";
+			productReference = D584D5A93004D9FF00EBB2FB /* jy-draftc-mac */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D584D5A13004D9FF00EBB2FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					D584D5A83004D9FF00EBB2FB = {
+						CreatedOnToolsVersion = 26.4;
+					};
+				};
+			};
+			buildConfigurationList = D584D5A43004D9FF00EBB2FB /* Build configuration list for PBXProject "jy-draftc-mac" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D584D5A03004D9FF00EBB2FB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D584D5AA3004D9FF00EBB2FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D584D5A83004D9FF00EBB2FB /* jy-draftc-mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D584D5A53004D9FF00EBB2FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D584D5AE3004D9FF00EBB2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D584D5AF3004D9FF00EBB2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D584D5B13004D9FF00EBB2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D584D5B23004D9FF00EBB2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D584D5A43004D9FF00EBB2FB /* Build configuration list for PBXProject "jy-draftc-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D584D5AE3004D9FF00EBB2FB /* Debug */,
+				D584D5AF3004D9FF00EBB2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D584D5B03004D9FF00EBB2FB /* Build configuration list for PBXNativeTarget "jy-draftc-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D584D5B13004D9FF00EBB2FB /* Debug */,
+				D584D5B23004D9FF00EBB2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D584D5A13004D9FF00EBB2FB /* Project object */;
+}

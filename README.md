@@ -17,7 +17,7 @@
 [阅读文档](./jy-draftc-mac/README.md)
 
 ## GUI版本 jy-draft-port
-由&nbsp;[@zzz1999](https://github.com/zzz1999))&nbsp;创建的带GUI的软件版本
+由&nbsp;[@zzz1999](https://github.com/zzz1999)&nbsp;创建的带GUI的软件版本
 
 为项目提供了可视化操作的解决方案
 

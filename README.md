@@ -3,27 +3,39 @@
 `jy-draftc` 是一个用于剪映 Windows 端草稿 JSON 的解密和回加密工具。
 它能将草稿内的 `draft_content.json` 和 `draft_meta_info.json` 解密为明文json，并能在修改后回加密。
 
-## 适用范围
-1. 应用 `jianying_draft_encrypt_v2` 加密方案 的剪映版本
+---
 
-    明确验证 `10.3.0` 到 `11.1.0` (截至2026.7.26的最新版本)，其他未验证
+## 适用的版本
 
+#### 下表为项目版本与其支持的剪映版本的关系对照表
+`（表内仅展示已验证过的版本，10.3.0之前的版本未验证）`
 
-3. 待更新...
+| 项目版本 | 剪映版本 | 备注 |
+| --- | --- | --- |
+| 0.1.1 | 10.3.0 - 11.1.0 |  |
 
-## MacOS版本 jy-draftc-mac
-感谢&nbsp;[@vhly](https://github.com/vhly)&nbsp;贡献的适用于MacOS的软件版本
+##### 未来的11.2.0正式版极大概率也正常适配。
 
-[阅读文档](./jy-draftc-mac/README.md)
+##### 更新时间：2026-08-01 00:12:53 UTC+8
 
-## GUI版本 jy-draft-port
-由&nbsp;[@zzz1999](https://github.com/zzz1999)&nbsp;创建和维护的带GUI的软件版本
+---
 
-提供了可视化操作，使操作更加简单
+### ✅ MacOS版本 jy-draftc-mac
+- 感谢&nbsp;[@vhly](https://github.com/vhly)&nbsp;贡献的适用于MacOS的软件版本
+- [阅读文档](./jy-draftc-mac/README.md)
 
-[传送至 jy-draft-port](https://github.com/zzz1999/jy-draft-port)
+### ✅ GUI版本 jy-draft-port
+- 由&nbsp;[@zzz1999](https://github.com/zzz1999)&nbsp;创建和维护的带GUI的软件版本
+- 提供了可视化操作，使操作更加简单
+- [传送至 jy-draft-port](https://github.com/zzz1999/jy-draft-port)
+
+---
 
 ## 快速开始
+
+<details>
+
+<summary>查看详情</summary>
 
 ### 准备
 下载 Windows amd64 分发包后解压，目录里有：
@@ -81,8 +93,15 @@ cd 解压路径
 
 多文件输入必须用英文逗号分隔。路径里有空格时，用英文双引号包住路径。
 
+</details>
+
+---
 
 ## 从源码构建
+
+<details>
+
+<summary>查看详情</summary>
 
 当前源码是单文件 C++ 程序，依赖 Windows API 和 C++17。
 
@@ -94,8 +113,15 @@ g++ -std=c++17 -O2 -municode -Wall -Wextra -static -static-libgcc -static-libstd
 
 编译时可能出现 `GetProcAddress` 到函数指针的类型转换 warning，这是当前手动调用 C++ 导出函数的预期结果。
 
+</details>
+
+---
+
 ## 实现原理
 
+<details>
+
+<summary>查看详情</summary>
 
 ```mermaid
 flowchart TD
@@ -144,15 +170,16 @@ EncryptUtils::decrypt(
 ?encrypt@EncryptUtils@lvve@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV34@@Z
 ```
 
+</details>
+
+---
 
 ## 使用边界与免责声明
 
-本项目仅用于学习、研究和技术验证。项目不研究、不提供、不支持任何形式的软件破解、商业限制绕过、版权保护绕过、账号/会员/云端鉴权绕过或未授权访问能力。
-
+```
 使用者应遵守所在地法律法规和相关软件用户协议，仅处理自己有权访问和修改的本地草稿文件。任何违法、侵权或未授权使用行为，均与项目作者无关。
-
-本项目按 MIT License 以“原样”提供，不提供任何明示或暗示担保。使用本项目造成的任何数据损坏、软件异常、账号风险、法律纠纷或其他后果，均由使用者自行承担。
-
+使用本项目造成的任何数据损坏、软件异常、账号风险、法律纠纷或其他后果，均由使用者自行承担。
+```
 
 ## 鸣谢
 感谢[Linux.do](https://linux.do/)站点及其社区为项目开发和交流提供支持。

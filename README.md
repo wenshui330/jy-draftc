@@ -11,10 +11,17 @@
 
 3. 待更新...
 
-## MacOS适配
+## MacOS版本 jy-draftc-mac
 感谢&nbsp;[@vhly](https://github.com/vhly)&nbsp;贡献的适用于MacOS的软件版本
 
 [阅读文档](./jy-draftc-mac/README.md)
+
+## GUI版本 jy-draft-port
+由&nbsp;[@zzz1999](https://github.com/vhly](https://github.com/zzz1999))&nbsp;创建的带GUI的软件版本
+
+为项目提供了可视化操作的解决方案
+
+[传送至 jy-draft-port](https://github.com/zzz1999/jy-draft-port)
 
 ## 快速开始
 

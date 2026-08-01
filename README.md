@@ -8,26 +8,30 @@
 ## 适用的版本
 
 #### 下表为项目版本与其支持的剪映版本的关系对照表
-`（表内仅展示已验证过的版本，10.3.0之前的版本未验证）`
+
+- `表内仅展示已验证过的版本，10.3.0之前的版本未验证，但推测6.5.0版本至当前标注版本均可用`
+
+- `仅验证剪映的正式版，测试版不作为最新可验证的版本`
 
 | 项目版本 | 剪映版本 | 备注 |
 | --- | --- | --- |
 | 0.1.1 | 10.3.0 - 11.1.0 |  |
 
+##### 持续更新中...
 ##### 未来的11.2.0正式版极大概率也正常适配。
 
-##### 更新时间：2026-08-01 00:12:53 UTC+8
+##### 更新时间：2026-08-01 13:46:48 UTC+8
 
 ---
 
 ### ✅ MacOS版本 jy-draftc-mac
-- 感谢&nbsp;[@vhly](https://github.com/vhly)&nbsp;贡献的适用于MacOS的软件版本
-- [阅读文档](./jy-draftc-mac/README.md)
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;感谢&nbsp;[@vhly](https://github.com/vhly)&nbsp;贡献的适用于MacOS的软件版本
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[阅读文档](./jy-draftc-mac/README.md)
 
 ### ✅ GUI版本 jy-draft-port
-- 由&nbsp;[@zzz1999](https://github.com/zzz1999)&nbsp;创建和维护的带GUI的软件版本
-- 提供了可视化操作，使操作更加简单
-- [传送至 jy-draft-port](https://github.com/zzz1999/jy-draft-port)
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由&nbsp;[@zzz1999](https://github.com/zzz1999)&nbsp;创建和维护的带GUI的软件版本
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提供了可视化操作，使操作更加简单
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[传送至 jy-draft-port](https://github.com/zzz1999/jy-draft-port)
 
 ---
 
@@ -171,6 +175,16 @@ EncryptUtils::decrypt(
 ```
 
 </details>
+
+---
+---
+
+## 相关
+
+### ⭐ jy-draftev
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;剪映 Windows 端的升级或降级草稿结构版本的工具
+
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[查看项目](https://github.com/wenshui330/jy-draftev)
 
 ---
 

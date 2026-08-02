@@ -186,6 +186,11 @@ EncryptUtils::decrypt(
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[查看项目](https://github.com/wenshui330/jy-draftev)
 
+### ⭐ Captex
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;剪映 11.1.0.14287 版本的编辑器导出功能的辅助工具
+
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[查看项目](https://github.com/wenshui330/Captex)
+
 ---
 
 ## 使用边界与免责声明

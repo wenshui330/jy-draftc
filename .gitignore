@@ -2,3 +2,5 @@ build/
 dist/
 .env
 *.user
+__pycache__/
+*.py[cod]
